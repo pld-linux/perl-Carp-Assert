@@ -1,23 +1,33 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Carp
 %define		pnam	Assert
 Summary:	Carp::Assert - executable comments
+Summary(pl):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
 Version:	0.17
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl-Test-Simple >= 0.18
+%{!?_without_tests:BuildRequires:	perl-Test-Simple >= 0.18}
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Carp::Assert is intended for a purpose like the ANSI C library assert.h.
-An assertion is used to prevent the impossible from being asked of your
-code, or at least tell you when it does.
+Carp::Assert is intended for a purpose like the ANSI C library
+assert.h. An assertion is used to prevent the impossible from being
+asked of your code, or at least tell you when it does.
+
+%description -l pl
+Modu³ Carp::Assert s³u¿y do tego, co assert.h z ANSI C. U¿ywa siê
+zapewnieñ (assertion), aby wykluczyæ wystêpowanie rzeczy niemo¿liwych,
+albo przynajmniej wiedzieæ, gdzie siê zdarzaj±.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -25,6 +35,8 @@ code, or at least tell you when it does.
 %build
 perl Makefile.PL
 %{__make}
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
