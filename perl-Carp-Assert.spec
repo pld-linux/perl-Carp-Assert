@@ -1,11 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Carp
 %define	pnam	Assert
-%include	/usr/lib/rpm/macros.perl
 Summary:	Carp-Assert perl module
 Summary(pl):	Modu³ perla Carp-Assert
 Name:		perl-Carp-Assert
 Version:	0.17
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -21,7 +21,7 @@ Carp-Assert perl module.
 Modu³ perla Carp-Assert.
 
 %prep
-%setup -q -n Carp-Assert-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
