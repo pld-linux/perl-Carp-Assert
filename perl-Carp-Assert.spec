@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Carp
 %define	pnam	Assert
-Summary:	Carp-Assert perl module
-Summary(pl):	Modu³ perla Carp-Assert
+Summary:	Carp::Assert perl module
+Summary(pl):	Modu³ perla Carp::Assert
 Name:		perl-Carp-Assert
 Version:	0.17
 Release:	4
@@ -15,10 +15,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Carp-Assert perl module.
+Carp::Assert perl module.
 
 %description -l pl
-Modu³ perla Carp-Assert.
+Modu³ perla Carp::Assert.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
