@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Carp
@@ -16,7 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8137794654f5802730c05167327d496e
 BuildRequires:	perl-devel >= 5.6.1
-%{!?_without_tests:BuildRequires:	perl-Test-Simple >= 0.18}
+%{?with_tests:BuildRequires:	perl-Test-Simple >= 0.18}
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,7 +39,7 @@ albo przynajmniej wiedzieæ, gdzie siê zdarzaj±.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
