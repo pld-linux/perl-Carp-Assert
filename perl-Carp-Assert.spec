@@ -10,7 +10,8 @@ Summary(pl):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
 Version:	0.18
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8137794654f5802730c05167327d496e
