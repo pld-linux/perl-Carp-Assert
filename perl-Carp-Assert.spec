@@ -2,7 +2,7 @@
 Summary:	Carp-Assert perl module
 Summary(pl):	Modu³ perla Carp-Assert
 Name:		perl-Carp-Assert
-Version:	0.16
+Version:	0.17
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
