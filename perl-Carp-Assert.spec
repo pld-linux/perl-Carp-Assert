@@ -2,7 +2,7 @@
 Summary:	Carp-Assert perl module
 Summary(pl):	Modu³ perla Carp-Assert
 Name:		perl-Carp-Assert
-Version:	0.08
+Version:	0.11
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -34,7 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Carp/Assert
   sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
+  mv -f .packlist.new .packlist
 )
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
