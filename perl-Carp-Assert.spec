@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Carp
-%define	pnam	Assert
+%define		pdir	Carp
+%define		pnam	Assert
 Summary:	Carp::Assert - executable comments
 Summary(pl):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
