@@ -9,13 +9,13 @@ Summary:	Carp::Assert - executable comments
 Summary(pl):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
 Version:	0.17
-Release:	8
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
 %{!?_without_tests:BuildRequires:	perl-Test-Simple >= 0.18}
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,8 @@ albo przynajmniej wiedzieæ, gdzie siê zdarzaj±.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -49,5 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/Carp
+%{perl_vendorlib}/Carp
 %{_mandir}/man3/*
