@@ -8,12 +8,12 @@
 Summary:	Carp::Assert - executable comments
 Summary(pl):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
-Version:	0.17
-Release:	9
+Version:	0.18
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5: 94c208587f49a85b3d3d354d0d3a7dc4
+# Source0-md5:	8137794654f5802730c05167327d496e
 BuildRequires:	perl-devel >= 5.6.1
 %{!?_without_tests:BuildRequires:	perl-Test-Simple >= 0.18}
 BuildRequires:	rpm-perlprov >= 4.1-13
