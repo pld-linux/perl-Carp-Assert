@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl Carp::Assert
 Summary(zh_CN):	Carp::Assert Perl дё©И
 Name:		perl-Carp-Assert
 Version:	0.17
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
