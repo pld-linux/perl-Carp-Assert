@@ -6,7 +6,7 @@
 %define		pdir	Carp
 %define		pnam	Assert
 Summary:	Carp::Assert - executable comments
-Summary(pl):	Carp::Assert - wykonywalne komentarze
+Summary(pl.UTF-8):   Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
 Version:	0.18
 Release:	4
@@ -29,10 +29,10 @@ Carp::Assert is intended for a purpose like the ANSI C library
 assert.h. An assertion is used to prevent the impossible from being
 asked of your code, or at least tell you when it does.
 
-%description -l pl
-Modu³ Carp::Assert s³u¿y do tego, co assert.h z ANSI C. U¿ywa siê
-zapewnieñ (assertion), aby wykluczyæ wystêpowanie rzeczy niemo¿liwych,
-albo przynajmniej wiedzieæ, gdzie siê zdarzaj±.
+%description -l pl.UTF-8
+ModuÅ‚ Carp::Assert sÅ‚uÅ¼y do tego, co assert.h z ANSI C. UÅ¼ywa siÄ™
+zapewnieÅ„ (assertion), aby wykluczyÄ‡ wystÄ™powanie rzeczy niemoÅ¼liwych,
+albo przynajmniej wiedzieÄ‡, gdzie siÄ™ zdarzajÄ….
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
