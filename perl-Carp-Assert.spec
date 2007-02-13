@@ -6,7 +6,7 @@
 %define		pdir	Carp
 %define		pnam	Assert
 Summary:	Carp::Assert - executable comments
-Summary(pl.UTF-8):   Carp::Assert - wykonywalne komentarze
+Summary(pl.UTF-8):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
 Version:	0.18
 Release:	4
