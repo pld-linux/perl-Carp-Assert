@@ -8,13 +8,13 @@
 Summary:	Carp::Assert - executable comments
 Summary(pl.UTF-8):	Carp::Assert - wykonywalne komentarze
 Name:		perl-Carp-Assert
-Version:	0.20
-Release:	2
+Version:	0.21
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Carp/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9dafe361b9e5e93e8e3e70e015f6b191
+# Source0-md5:	72e75c152cc354420719fc9728deec71
 URL:		http://search.cpan.org/dist/Carp-Assert/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
@@ -58,4 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Carp/Assert.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Carp::Assert.3pm*
